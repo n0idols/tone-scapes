@@ -7,15 +7,15 @@ export default async function handler(
 ) {
   if (req.method === "GET") {
     try {
-      const product = await prisma.product.findMany({
+      const data = await prisma.category.findMany({
         where: {
           id: req?.query?.id?.toString(),
         },
         include: {
-          category: true,
+          Products: { orderBy: { id: "asc" } },
         },
       });
-      return res.status(200).json(product);
+      return res.status(200).json(data);
     } catch (error) {
       return res.status(500).json(error);
     }
