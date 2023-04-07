@@ -1,5 +1,10 @@
 import { Product } from "@/types";
 
-export default function SingleProduct({ product }: { product: Product }) {
-  return <h1>{product.name}</h1>;
-}
+const SingleProduct = ({ product }: { product: Product }) => {
+  return (
+    <div>
+      <pre>{JSON.stringify(product, null, 2)}</pre>
+    </div>
+  );
+};
+export default SingleProduct;
