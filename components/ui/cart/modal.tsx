@@ -10,6 +10,7 @@ import ReactDOM from "react-dom";
 import { reveal } from "@/lib/animations";
 import { useCart } from "@/components/context/cart";
 import Overlay from "../modal/overlay";
+import CartItem from "./item";
 
 const container = `max-w-6xl flex justify-end mx-auto px-4 w-full`;
 const themodal = `w-full md:w-1/2 lg:w-1/3`;
