@@ -1,7 +1,18 @@
-import fetchProducts from "@/components/data/fetchProducts";
+// import Hero from "@/components/Hero";
+// import Info from "@/components/Info";
 
-const page = async () => {
-  const products = await fetchProducts();
-  return <div>{JSON.stringify(products, null, 2)}</div>;
-};
-export default page;
+// import React from "react";
+// import CategoryList from "@/components/CategoryList";
+// import FeaturedProducts from "@/components/FeaturedProducts";
+
+export default async function page() {
+  return (
+    <>
+      yo
+      {/* <Hero />
+      <CategoryList />
+      <FeaturedProducts />
+      <Info /> */}
+    </>
+  );
+}
