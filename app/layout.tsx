@@ -1,9 +1,8 @@
 import { Manrope } from "next/font/google";
-
 import "./globals.css";
 import Providers from "@/components/context/providers";
-import Navbar from "@/components/ui/Navbar";
-import Footer from "@/components/ui/Footer";
+import Navbar from "@/components/ui/layout/Navbar";
+import Footer from "@/components/ui/layout/Footer";
 
 export const metadata = {
   title: "Audiophile E-commerce Store",

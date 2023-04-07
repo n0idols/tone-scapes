@@ -1,11 +1,9 @@
-import Image from "next/image";
-
-import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { categories } from "@/lib/catdata";
-
-const CategoryList = () => {
+import { ChevronRightIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
+const MobileCategoryList = () => {
   return (
-    <div className="container mt-32">
+    <div className="lg:hidden container pt-32 bg-white">
       <div className="grid md:grid-cols-3 md:gap-8 ">
         {categories.map((category) => (
           <div key={category.id} className="-mt-32">
@@ -21,7 +19,6 @@ const CategoryList = () => {
                 <h3 className="tracking-widest uppercase font-bold">
                   {category.name}
                 </h3>
-
                 <a
                   href={`/${category.name}`}
                   className="text-xs text-gray-400 uppercase font-bold tracking-widest flex items-center"
@@ -37,4 +34,4 @@ const CategoryList = () => {
   );
 };
 
-export default CategoryList;
+export default MobileCategoryList;

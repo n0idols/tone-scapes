@@ -4,9 +4,8 @@ import { useState, useEffect, Key } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { dropIn } from "@/lib/animations";
 import ReactDOM from "react-dom";
-
-import Overlay from "./modal/overlay";
-import CategoryList from "./category/list";
+import Overlay from "../modal/overlay";
+import MobileCategoryList from "../category/moblist";
 
 const MobNav = ({ show, onClose }: any) => {
   const [isBrowser, setIsBrowser] = useState(false);
@@ -25,7 +24,7 @@ const MobNav = ({ show, onClose }: any) => {
         onClick={(e) => e.stopPropagation()}
         className="w-full md:h-1/3 h-full my-32 mx-4 "
       >
-        <CategoryList />
+        <MobileCategoryList />
       </motion.div>
     </Overlay>
   ) : null;

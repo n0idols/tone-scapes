@@ -6,10 +6,10 @@ import { usePathname } from "next/navigation";
 import { Bars3Icon } from "@heroicons/react/20/solid";
 
 import MobNav from "./MobNav";
-import { useCart } from "../context/cart";
-import CartModal from "./cart/modal";
-import Logo from "./icons/Logo";
-import CartIcon from "./icons/CartIcon";
+import { useCart } from "@/components/context/cart";
+import CartModal from "../cart/modal";
+import Logo from "../icons/Logo";
+import CartIcon from "../icons/CartIcon";
 
 export const navLinks = [
   {

@@ -1,5 +1,5 @@
 import fetchCategory from "@/components/data/fetchCategory";
-import PageHero from "@/components/ui/PageHero";
+import PageHero from "@/components/ui/layout/PageHero";
 import CategoryItem from "@/components/ui/category/item";
 import { Product } from "@/types";
 
