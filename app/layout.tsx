@@ -2,6 +2,8 @@ import { Manrope } from "next/font/google";
 
 import "./globals.css";
 import Providers from "@/components/context/providers";
+import Navbar from "@/components/ui/Navbar";
+import Footer from "@/components/ui/Footer";
 
 export const metadata = {
   title: "Audiophile E-commerce Store",
@@ -26,9 +28,9 @@ export default function RootLayout({
         <div id="mob-nav"></div>
 
         <Providers>
-          {/* <Navbar /> */}
+          <Navbar />
           <div className="min-h-screen">{children}</div>
-          {/* <Footer /> */}
+          <Footer />
         </Providers>
       </body>
     </html>
