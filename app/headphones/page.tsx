@@ -9,5 +9,9 @@ export const metadata = {
 export default async function page() {
   const productsData: Promise<Product> = getAllProducts();
   const products = await Promise.all([productsData]);
-  return <div>{JSON.stringify(products)}</div>;
+  return (
+    <div>
+      <h1>cool</h1>
+    </div>
+  );
 }
