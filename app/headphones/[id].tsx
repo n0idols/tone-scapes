@@ -1,6 +1,6 @@
 import getSingleProduct from "@/components/data/getSingleProduct";
 import SingleProduct from "@/components/ui/product/SingleProduct";
-import { Params, Product } from "@/prisma/types";
+import { Params, Product } from "@/types";
 
 export default async function Page({ params }: Params) {
   const productData: Promise<Product> = getSingleProduct(params.id);

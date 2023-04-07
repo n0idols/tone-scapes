@@ -1,7 +1,5 @@
 export default async function getSingleProduct(id: string) {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_ROUTE}/api/products/${id}`
-  );
+  const res = await fetch(`https://tone-scapes.vercel.app/api/products/${id}`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch product");

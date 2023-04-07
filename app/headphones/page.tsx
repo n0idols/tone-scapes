@@ -1,5 +1,5 @@
 import getAllProducts from "@/components/data/getAllProducts";
-import { Product } from "@/prisma/types";
+import { Product } from "@/types";
 
 export const metadata = {
   title: "Headphones",
