@@ -1,11 +1,7 @@
-async function fetchProducts() {
-  const res = await fetch(`https://tone-scapes.vercel.app/api/products`);
-  const data = await res.json();
-  return data;
-}
+import fetchProducts from "@/components/data/fetchProducts";
 
 const page = async () => {
   const products = await fetchProducts();
-  return <pre>{JSON.stringify(products, null, 2)}</pre>;
+  return <div>{JSON.stringify(products, null, 2)}</div>;
 };
 export default page;
