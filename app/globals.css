@@ -74,3 +74,7 @@ fieldset {
 .badge {
   @apply bg-red-500 absolute bottom-1 left-2 z-10 rounded-full px-4 py-2;
 }
+
+.subheading {
+  @apply uppercase tracking-wide font-bold text-2xl;
+}

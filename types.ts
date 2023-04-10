@@ -14,10 +14,16 @@ export interface Product {
   image?: string;
   mobileimg?: string;
   gallery?: string[];
+  includes?: any;
   category?: {
     id: string;
   };
   categoryId?: string;
+}
+
+export interface BoxItem {
+  name: string;
+  qty: number;
 }
 
 export type Params = {
