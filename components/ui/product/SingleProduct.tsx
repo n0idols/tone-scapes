@@ -110,7 +110,7 @@ const SingleProduct = ({ product }: { product: Product }) => {
             <h2 className="subheading mb-7">In The Box</h2>
             <div className="space-y-2">
               {product.includes.box.map((item: BoxItem) => (
-                <div className="flex space-x-8 ">
+                <div key={item.qty} className="flex space-x-8 ">
                   <p className="text-primary font-bold text">{item.qty}x</p>
                   <p className="text-gray-500">{item.name}</p>
                 </div>
