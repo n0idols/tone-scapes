@@ -35,6 +35,8 @@ const SingleProduct = ({ product }: { product: Product }) => {
   let two = product.gallery?.[1];
   let three = product.gallery?.[2];
 
+  const hasGallery = one && two && three;
+
   return (
     <div className="my-8">
       <form className="flex flex-col" onSubmit={addItemToCart}>
@@ -108,14 +110,18 @@ const SingleProduct = ({ product }: { product: Product }) => {
 
           <div className="grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 lg:ml-20 mb-20">
             <h2 className="subheading mb-7">In The Box</h2>
-            <div className="space-y-2">
-              {product.includes.box?.map((item: BoxItem) => (
-                <div key={item.qty} className="flex space-x-8 ">
-                  <p className="text-primary font-bold text">{item.qty}x</p>
-                  <p className="text-gray-500">{item.name}</p>
-                </div>
-              ))}
-            </div>
+            {product.includes.box ? (
+              <div className="space-y-2">
+                {product.includes.box?.map((item: BoxItem) => (
+                  <div key={item.qty} className="flex space-x-8 ">
+                    <p className="text-primary font-bold text">{item.qty}x</p>
+                    <p className="text-gray-500">{item.name}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-gray-500">No items included</p>
+            )}
           </div>
         </div>
       </div>
@@ -137,39 +143,41 @@ const SingleProduct = ({ product }: { product: Product }) => {
         </div>
       </div> */}
 
-      <div className="container">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="space-y-4">
-            <Image
-              src={one || "/placeholder.jpg"}
-              alt={product.name}
-              width="0"
-              height="0"
-              sizes="100vw"
-              className="w-full h-auto rounded-lg"
-            />
-            <Image
-              src={two || "/placeholder.jpg"}
-              alt={product.name}
-              width="0"
-              height="0"
-              sizes="100vw"
-              className="w-full h-auto rounded-lg"
-            />
-          </div>
-          <div className="">
-            <Image
-              src={three || "/placeholder.jpg"}
-              alt={product.name}
-              width="0"
-              height="0"
-              sizes="100vw"
-              className="w-full h-full rounded-lg"
-              style={{ objectFit: "cover" }}
-            />
+      {hasGallery ? (
+        <div className="container">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-4">
+              <Image
+                src={one || "/placeholder.jpg"}
+                alt={product.name}
+                width="0"
+                height="0"
+                sizes="100vw"
+                className="w-full h-auto rounded-lg"
+              />
+              <Image
+                src={two || "/placeholder.jpg"}
+                alt={product.name}
+                width="0"
+                height="0"
+                sizes="100vw"
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+            <div className="">
+              <Image
+                src={three || "/placeholder.jpg"}
+                alt={product.name}
+                width="0"
+                height="0"
+                sizes="100vw"
+                className="w-full h-full rounded-lg"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      ) : null}
     </div>
   );
 };
