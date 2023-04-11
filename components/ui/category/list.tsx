@@ -9,7 +9,7 @@ const CategoryList = () => {
       <div className="grid md:grid-cols-3 md:gap-8 ">
         {categories.map((category) => (
           <div key={category.id} className="-mt-32">
-            <div className="bg-gray-100 mt-32 flex flex-col justify-center items-center h-1/2 py-12 rounded-md ">
+            <div className="bg-greys-two mt-32 flex flex-col justify-center items-center h-1/2 py-12 rounded-md ">
               <Image
                 src={category.image}
                 alt={category.name}

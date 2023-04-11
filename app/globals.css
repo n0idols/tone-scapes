@@ -11,7 +11,7 @@ label {
 }
 
 select {
-  @apply mb-2 rounded-md bg-gray-100 p-2;
+  @apply mb-2 rounded-md bg-greys-two p-2;
 }
 legend {
   @apply mb-4 uppercase text-primary font-semibold tracking-widest text-xs;
@@ -48,11 +48,11 @@ fieldset {
 }
 
 .qty-btn {
-  @apply bg-gray-100 p-4 text-gray-600;
+  @apply bg-greys-two p-4 text-gray-600;
 }
 
 .qty-input {
-  @apply w-[3rem] bg-gray-100 text-center font-bold text-gray-900 focus:border-blue-500 focus:ring-blue-500;
+  @apply w-[3rem] bg-greys-two text-center font-bold text-gray-900 focus:border-blue-500 focus:ring-blue-500;
 }
 
 .form {

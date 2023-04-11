@@ -41,7 +41,10 @@ module.exports = {
           two: "#F1F1F1",
           three: "#FAFAFA",
         },
-        grey: "#d9d9d9",
+        greys: {
+          one: "#d9d9d9",
+          two: "#f0f0f0",
+        },
 
         // black: {
         //   800: "#151515",

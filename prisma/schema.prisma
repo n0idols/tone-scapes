@@ -21,6 +21,7 @@ model Product {
   shortname  String?
   includes   Json?
   category   Category @relation(fields: [categoryId], references: [id])
+  
 }
 
 model Category {

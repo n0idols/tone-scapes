@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Info = () => {
   return (
-    <div className="container my-48">
+    <div className="container my-32">
       <div className="flex flex-col-reverse lg:flex-row">
         <div className="flex flex-col justify-center md:px-6 lg:w-1/2 text-center lg:text-left">
           <h2 className="md:text-4xl text-3xl uppercase tracking-widest font-bold py-10">
