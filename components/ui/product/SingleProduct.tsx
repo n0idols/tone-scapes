@@ -110,7 +110,7 @@ const SingleProduct = ({ product }: { product: Product }) => {
 
           <div className="grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 lg:ml-20 mb-20">
             <h2 className="subheading mb-7">In The Box</h2>
-            {product.includes.box ? (
+            {/* {product.includes.box ? (
               <div className="space-y-2">
                 {product.includes.box?.map((item: BoxItem) => (
                   <div key={item.qty} className="flex space-x-8 ">
@@ -121,7 +121,7 @@ const SingleProduct = ({ product }: { product: Product }) => {
               </div>
             ) : (
               <p className="text-gray-500">No items included</p>
-            )}
+            )} */}
           </div>
         </div>
       </div>
