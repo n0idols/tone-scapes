@@ -178,6 +178,8 @@ const SingleProduct = ({ product }: { product: Product }) => {
           </div>
         </div>
       ) : null}
+
+      <pre>{JSON.stringify(product, null, 2)}</pre>
     </div>
   );
 };
